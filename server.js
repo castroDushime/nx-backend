@@ -6,8 +6,14 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
-const PORT = process.env.PORT || 8080;
+app.use(cors({
+    origin: ['http://localhost:3000', 'nxplayers.com'], // Add your frontend URLs
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
+
+const PORT = process.env.PORT || 'https://nx-backend-topaz.vercel.app';
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
