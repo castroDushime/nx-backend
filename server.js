@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:3000', 'nxplayers.com'], // Add your frontend URLs
+    origin: ['http://localhost:5173', 'nxplayers.com'], // Add your frontend URLs
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
