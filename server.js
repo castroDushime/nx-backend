@@ -12,6 +12,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
+app.options('*', cors());
 
 const PORT = process.env.PORT || 'https://nx-backend-topaz.vercel.app';
 
