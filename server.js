@@ -14,7 +14,7 @@ app.use(cors({
 }));
 app.options('*', cors());
 
-const PORT = process.env.PORT || 'https://nx-backend-topaz.vercel.app';
+const PORT = process.env.PORT || 3000;
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
